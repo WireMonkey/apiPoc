@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JNLSuperFulfillmentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="CartID" />
+    </Key>
+    <Property Name="CartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="InventoryID" Type="int" Nullable="false" />
+    <Property Name="ComponentID" Type="int" />
+    <Property Name="State" Type="nvarchar" MaxLength="10" />
+    <Property Name="Firm" Type="nvarchar" MaxLength="100" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="DripDate" Type="smalldatetime" />
+    <Property Name="PrintFileName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProofDate" Type="datetime" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" />
+    <Property Name="ModUser" Type="int" />
+    <Property Name="TransactionID" Type="int" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="IsProofMade" Type="bit" Nullable="false" />
+    <Property Name="IsPrintFileMade" Type="bit" Nullable="false" />
+    <Property Name="IsError" Type="bit" Nullable="false" />
+    <Property Name="ErrorMessage" Type="varchar(max)" />
+    <Property Name="RootParentID" Type="int" />
+    <Property Name="PrintCost" Type="money" />
+    <Property Name="FulfillmentCost" Type="money" />
+    <Property Name="PrintSurcharge" Type="money" />
+    <Property Name="PostageEstimate" Type="money" />
+    <Property Name="NumOfLineItems" Type="int" Nullable="false" />
+    <Property Name="NumOfLineItemQty" Type="int" Nullable="false" />
+    <Property Name="NumOfKitting" Type="int" Nullable="false" />
+    <Property Name="NumOfCoreKitting" Type="int" Nullable="false" />
+    <Property Name="OrderingType" Type="varchar" MaxLength="11" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="LineItemCost" Type="money" StoreGeneratedPattern="Computed" />
+    <Property Name="PrintChargeBackCost" Type="money" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+    <Property Name="IsInProgress" Type="bit" Nullable="false" />
+    <Property Name="SortOrder" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CartGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="SetForCheckout" Type="bit" />
+    <Property Name="TransactionQty" Type="int" />
+    <Property Name="IsAutoDeleted" Type="bit" />
+    <Property Name="AutoDeletedConfirmedDate" Type="datetime" />
+    <Property Name="InventoryReplacedID" Type="int" />
+    <Property Name="CartSavedID" Type="int" />
+    <Property Name="CartSavedDetailID" Type="int" />
+    <Property Name="AddSource" Type="varchar" MaxLength="20" />
+    <Property Name="IsHold" Type="bit" />
+    <Property Name="ParkGroup" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CartSaved">
+    <Key>
+      <PropertyRef Name="CartSavedID" />
+    </Key>
+    <Property Name="CartSavedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="SavedName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpiredOnDate" Type="datetime" />
+    <Property Name="OrderedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EnvironmentSettings">
+    <Key>
+      <PropertyRef Name="EnvironmentSettingID" />
+    </Key>
+    <Property Name="EnvironmentSettingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="int" Nullable="false" />
+    <Property Name="ModDate" Type="datetime" />
+    <Property Name="ModUser" Type="int" />
+  </EntityType>
+  <EntityContainer Name="JNLSuperFulfillmentModelStoreContainer">
+    <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CartSaved" EntityType="Self.CartSaved" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnvironmentSettings" EntityType="Self.EnvironmentSettings" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

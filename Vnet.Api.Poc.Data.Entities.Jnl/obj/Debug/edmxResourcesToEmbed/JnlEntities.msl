@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JNLSuperFulfillmentModelStoreContainer" CdmEntityContainer="JNLSuperFulfillmentEntities">
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="JNLSuperFulfillmentModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="CartID" ColumnName="CartID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+          <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Firm" ColumnName="Firm" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="DripDate" ColumnName="DripDate" />
+          <ScalarProperty Name="PrintFileName" ColumnName="PrintFileName" />
+          <ScalarProperty Name="ProofDate" ColumnName="ProofDate" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="IsProofMade" ColumnName="IsProofMade" />
+          <ScalarProperty Name="IsPrintFileMade" ColumnName="IsPrintFileMade" />
+          <ScalarProperty Name="IsError" ColumnName="IsError" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="RootParentID" ColumnName="RootParentID" />
+          <ScalarProperty Name="PrintCost" ColumnName="PrintCost" />
+          <ScalarProperty Name="FulfillmentCost" ColumnName="FulfillmentCost" />
+          <ScalarProperty Name="PrintSurcharge" ColumnName="PrintSurcharge" />
+          <ScalarProperty Name="PostageEstimate" ColumnName="PostageEstimate" />
+          <ScalarProperty Name="NumOfLineItems" ColumnName="NumOfLineItems" />
+          <ScalarProperty Name="NumOfLineItemQty" ColumnName="NumOfLineItemQty" />
+          <ScalarProperty Name="NumOfKitting" ColumnName="NumOfKitting" />
+          <ScalarProperty Name="NumOfCoreKitting" ColumnName="NumOfCoreKitting" />
+          <ScalarProperty Name="OrderingType" ColumnName="OrderingType" />
+          <ScalarProperty Name="LineItemCost" ColumnName="LineItemCost" />
+          <ScalarProperty Name="PrintChargeBackCost" ColumnName="PrintChargeBackCost" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IsInProgress" ColumnName="IsInProgress" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="CartGroup" ColumnName="CartGroup" />
+          <ScalarProperty Name="SetForCheckout" ColumnName="SetForCheckout" />
+          <ScalarProperty Name="TransactionQty" ColumnName="TransactionQty" />
+          <ScalarProperty Name="IsAutoDeleted" ColumnName="IsAutoDeleted" />
+          <ScalarProperty Name="AutoDeletedConfirmedDate" ColumnName="AutoDeletedConfirmedDate" />
+          <ScalarProperty Name="InventoryReplacedID" ColumnName="InventoryReplacedID" />
+          <ScalarProperty Name="CartSavedID" ColumnName="CartSavedID" />
+          <ScalarProperty Name="CartSavedDetailID" ColumnName="CartSavedDetailID" />
+          <ScalarProperty Name="AddSource" ColumnName="AddSource" />
+          <ScalarProperty Name="IsHold" ColumnName="IsHold" />
+          <ScalarProperty Name="ParkGroup" ColumnName="ParkGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartSaveds">
+      <EntityTypeMapping TypeName="JNLSuperFulfillmentModel.CartSaved">
+        <MappingFragment StoreEntitySet="CartSaved">
+          <ScalarProperty Name="CartSavedID" ColumnName="CartSavedID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SavedName" ColumnName="SavedName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ExpiredOnDate" ColumnName="ExpiredOnDate" />
+          <ScalarProperty Name="OrderedDate" ColumnName="OrderedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnvironmentSettings">
+      <EntityTypeMapping TypeName="JNLSuperFulfillmentModel.EnvironmentSetting">
+        <MappingFragment StoreEntitySet="EnvironmentSettings">
+          <ScalarProperty Name="EnvironmentSettingID" ColumnName="EnvironmentSettingID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

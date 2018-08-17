@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KaiserPermanenteModelStoreContainer" CdmEntityContainer="KaiserPermanenteEntities">
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="KaiserPermanenteModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="CartID" ColumnName="CartID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+          <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Firm" ColumnName="Firm" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="DripDate" ColumnName="DripDate" />
+          <ScalarProperty Name="PrintFileName" ColumnName="PrintFileName" />
+          <ScalarProperty Name="ProofDate" ColumnName="ProofDate" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="IsProofMade" ColumnName="IsProofMade" />
+          <ScalarProperty Name="IsPrintFileMade" ColumnName="IsPrintFileMade" />
+          <ScalarProperty Name="IsError" ColumnName="IsError" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="RootParentID" ColumnName="RootParentID" />
+          <ScalarProperty Name="PrintCost" ColumnName="PrintCost" />
+          <ScalarProperty Name="PrintChargeBackCost" ColumnName="PrintChargeBackCost" />
+          <ScalarProperty Name="FulfillmentCost" ColumnName="FulfillmentCost" />
+          <ScalarProperty Name="PrintSurcharge" ColumnName="PrintSurcharge" />
+          <ScalarProperty Name="PostageEstimate" ColumnName="PostageEstimate" />
+          <ScalarProperty Name="OrderingType" ColumnName="OrderingType" />
+          <ScalarProperty Name="LineItemCost" ColumnName="LineItemCost" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IsInProgress" ColumnName="IsInProgress" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="NumOfLineItems" ColumnName="NumOfLineItems" />
+          <ScalarProperty Name="NumOfLineItemQty" ColumnName="NumOfLineItemQty" />
+          <ScalarProperty Name="NumOfKitting" ColumnName="NumOfKitting" />
+          <ScalarProperty Name="NumOfCoreKitting" ColumnName="NumOfCoreKitting" />
+          <ScalarProperty Name="NumOfKitLineItems" ColumnName="NumOfKitLineItems" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="RoleIDs" ColumnName="RoleIDs" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="QtyType" ColumnName="QtyType" />
+          <ScalarProperty Name="CartLineItemTypeID" ColumnName="CartLineItemTypeID" />
+          <ScalarProperty Name="InventoryTypeID" ColumnName="InventoryTypeID" />
+          <ScalarProperty Name="IsPrintCostApproved" ColumnName="IsPrintCostApproved" />
+          <ScalarProperty Name="ExternalPartNumber" ColumnName="ExternalPartNumber" />
+          <ScalarProperty Name="IsHiddenFromUI" ColumnName="IsHiddenFromUI" />
+          <ScalarProperty Name="IsHold" ColumnName="IsHold" />
+          <ScalarProperty Name="OriginalCartID" ColumnName="OriginalCartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnvironmentSettings">
+      <EntityTypeMapping TypeName="KaiserPermanenteModel.EnvironmentSetting">
+        <MappingFragment StoreEntitySet="EnvironmentSettings">
+          <ScalarProperty Name="EnvironmentSettingID" ColumnName="EnvironmentSettingID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

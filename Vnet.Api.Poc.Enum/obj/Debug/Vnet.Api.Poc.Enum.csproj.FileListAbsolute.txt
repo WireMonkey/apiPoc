@@ -1,0 +1,6 @@
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Enum\bin\Debug\Vnet.Api.Poc.Enum.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Enum\bin\Debug\Vnet.Api.Poc.Enum.pdb
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Enum\obj\Debug\Vnet.Api.Poc.Enum.csprojResolveAssemblyReference.cache
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Enum\obj\Debug\Vnet.Api.Poc.Enum.csproj.CoreCompileInputs.cache
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Enum\obj\Debug\Vnet.Api.Poc.Enum.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Enum\obj\Debug\Vnet.Api.Poc.Enum.pdb

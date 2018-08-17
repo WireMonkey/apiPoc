@@ -1,0 +1,7 @@
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\bin\Debug\Vnet.Api.Poc.Business.Interface.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\bin\Debug\Vnet.Api.Poc.Business.Interface.pdb
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\bin\Debug\Newtonsoft.Json.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\bin\Debug\Newtonsoft.Json.xml
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\obj\Debug\Vnet.Api.Poc.Business.Interface.csproj.CoreCompileInputs.cache
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\obj\Debug\Vnet.Api.Poc.Business.Interface.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Business.Interface\obj\Debug\Vnet.Api.Poc.Business.Interface.pdb

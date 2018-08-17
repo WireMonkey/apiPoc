@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="CartID" />
+    </Key>
+    <Property Name="CartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="InventoryID" Type="Int32" Nullable="false" />
+    <Property Name="ComponentID" Type="Int32" />
+    <Property Name="State" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Firm" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="DripDate" Type="DateTime" Precision="0" />
+    <Property Name="PrintFileName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ProofDate" Type="DateTime" Precision="3" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateUser" Type="Int32" Nullable="false" />
+    <Property Name="ModDate" Type="DateTime" Precision="3" />
+    <Property Name="ModUser" Type="Int32" />
+    <Property Name="TransactionID" Type="Int32" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="IsProofMade" Type="Boolean" Nullable="false" />
+    <Property Name="IsPrintFileMade" Type="Boolean" Nullable="false" />
+    <Property Name="IsError" Type="Boolean" Nullable="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="RootParentID" Type="Int32" />
+    <Property Name="PrintCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PrintChargeBackCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FulfillmentCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PrintSurcharge" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PostageEstimate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OrderingType" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineItemCost" Type="Decimal" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <Property Name="IsInProgress" Type="Boolean" Nullable="false" />
+    <Property Name="SortOrder" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumOfLineItems" Type="Int32" Nullable="false" />
+    <Property Name="NumOfLineItemQty" Type="Int32" Nullable="false" />
+    <Property Name="NumOfKitting" Type="Int32" Nullable="false" />
+    <Property Name="NumOfCoreKitting" Type="Int32" Nullable="false" />
+    <Property Name="NumOfKitLineItems" Type="Int32" Nullable="false" />
+    <Property Name="LocationID" Type="Int32" />
+    <Property Name="RoleIDs" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="ContactID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Qty" Type="Int32" />
+    <Property Name="QtyType" Type="Int32" />
+    <Property Name="CartLineItemTypeID" Type="Int16" Nullable="false" />
+    <Property Name="InventoryTypeID" Type="Int32" />
+    <Property Name="IsPrintCostApproved" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalPartNumber" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="IsHiddenFromUI" Type="Boolean" />
+    <Property Name="IsHold" Type="Boolean" Nullable="false" />
+    <Property Name="OriginalCartID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EnvironmentSetting">
+    <Key>
+      <PropertyRef Name="EnvironmentSettingID" />
+    </Key>
+    <Property Name="EnvironmentSettingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateUser" Type="Int32" Nullable="false" />
+    <Property Name="ModDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModUser" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ABCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Carts" EntityType="Self.Cart" />
+    <EntitySet Name="EnvironmentSettings" EntityType="Self.EnvironmentSetting" />
+  </EntityContainer>
+</Schema>

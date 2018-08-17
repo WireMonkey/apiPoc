@@ -1,0 +1,5 @@
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Poco\bin\Debug\Vnet.Api.Poc.Poco.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Poco\bin\Debug\Vnet.Api.Poc.Poco.pdb
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Poco\obj\Debug\Vnet.Api.Poc.Poco.csproj.CoreCompileInputs.cache
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Poco\obj\Debug\Vnet.Api.Poc.Poco.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Poco\obj\Debug\Vnet.Api.Poc.Poco.pdb

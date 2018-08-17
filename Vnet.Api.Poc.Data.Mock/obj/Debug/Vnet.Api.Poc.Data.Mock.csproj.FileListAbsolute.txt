@@ -1,0 +1,10 @@
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\Vnet.Api.Poc.Data.Mock.dll.config
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\Vnet.Api.Poc.Data.Mock.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\Vnet.Api.Poc.Data.Mock.pdb
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\EntityFramework.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\EntityFramework.xml
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\obj\Debug\Vnet.Api.Poc.Data.Mock.csproj.CoreCompileInputs.cache
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\obj\Debug\Vnet.Api.Poc.Data.Mock.dll
+C:\Git\Vnet.Api.Poc\Vnet.Api.Poc.Data.Mock\obj\Debug\Vnet.Api.Poc.Data.Mock.pdb

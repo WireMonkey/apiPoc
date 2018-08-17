@@ -1,0 +1,6 @@
+﻿Jwt Payload
+{
+  "exp": "1234567890", The datetime that the token expires
+  "client": "test", the client that this token is using
+  "user": 12 the user account that this token is using
+}

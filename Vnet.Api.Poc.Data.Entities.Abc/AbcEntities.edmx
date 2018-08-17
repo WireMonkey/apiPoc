@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ABCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="CartID" />
+          </Key>
+          <Property Name="CartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="InventoryID" Type="int" Nullable="false" />
+          <Property Name="ComponentID" Type="int" />
+          <Property Name="State" Type="nvarchar" MaxLength="10" />
+          <Property Name="Firm" Type="nvarchar" MaxLength="100" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="DripDate" Type="smalldatetime" />
+          <Property Name="PrintFileName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProofDate" Type="datetime" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="int" Nullable="false" />
+          <Property Name="ModDate" Type="datetime" />
+          <Property Name="ModUser" Type="int" />
+          <Property Name="TransactionID" Type="int" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="IsProofMade" Type="bit" Nullable="false" />
+          <Property Name="IsPrintFileMade" Type="bit" Nullable="false" />
+          <Property Name="IsError" Type="bit" Nullable="false" />
+          <Property Name="ErrorMessage" Type="varchar" MaxLength="8000" />
+          <Property Name="RootParentID" Type="int" />
+          <Property Name="PrintCost" Type="money" />
+          <Property Name="PrintChargeBackCost" Type="money" />
+          <Property Name="FulfillmentCost" Type="money" />
+          <Property Name="PrintSurcharge" Type="money" />
+          <Property Name="PostageEstimate" Type="money" />
+          <Property Name="OrderingType" Type="varchar" MaxLength="11" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="LineItemCost" Type="money" StoreGeneratedPattern="Computed" />
+          <Property Name="IsRemoved" Type="bit" Nullable="false" />
+          <Property Name="IsInProgress" Type="bit" Nullable="false" />
+          <Property Name="SortOrder" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="NumOfLineItems" Type="int" Nullable="false" />
+          <Property Name="NumOfLineItemQty" Type="int" Nullable="false" />
+          <Property Name="NumOfKitting" Type="int" Nullable="false" />
+          <Property Name="NumOfCoreKitting" Type="int" Nullable="false" />
+          <Property Name="NumOfKitLineItems" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="RoleIDs" Type="varchar" MaxLength="800" />
+          <Property Name="ContactID" Type="varchar" MaxLength="255" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="QtyType" Type="int" />
+          <Property Name="CartLineItemTypeID" Type="smallint" Nullable="false" />
+          <Property Name="InventoryTypeID" Type="int" />
+          <Property Name="IsPrintCostApproved" Type="bit" Nullable="false" />
+          <Property Name="ExternalPartNumber" Type="varchar" MaxLength="75" />
+          <Property Name="IsHiddenFromUI" Type="bit" />
+          <Property Name="IsHold" Type="bit" Nullable="false" />
+          <Property Name="OriginalCartID" Type="int" />
+        </EntityType>
+        <EntityType Name="EnvironmentSettings">
+          <Key>
+            <PropertyRef Name="EnvironmentSettingID" />
+          </Key>
+          <Property Name="EnvironmentSettingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="int" Nullable="false" />
+          <Property Name="ModDate" Type="datetime" Nullable="false" />
+          <Property Name="ModUser" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ABCModelStoreContainer">
+          <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnvironmentSettings" EntityType="Self.EnvironmentSettings" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ABCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="CartID" />
+          </Key>
+          <Property Name="CartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="InventoryID" Type="Int32" Nullable="false" />
+          <Property Name="ComponentID" Type="Int32" />
+          <Property Name="State" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Firm" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="DripDate" Type="DateTime" Precision="0" />
+          <Property Name="PrintFileName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProofDate" Type="DateTime" Precision="3" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUser" Type="Int32" Nullable="false" />
+          <Property Name="ModDate" Type="DateTime" Precision="3" />
+          <Property Name="ModUser" Type="Int32" />
+          <Property Name="TransactionID" Type="Int32" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="IsProofMade" Type="Boolean" Nullable="false" />
+          <Property Name="IsPrintFileMade" Type="Boolean" Nullable="false" />
+          <Property Name="IsError" Type="Boolean" Nullable="false" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="RootParentID" Type="Int32" />
+          <Property Name="PrintCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PrintChargeBackCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FulfillmentCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PrintSurcharge" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PostageEstimate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OrderingType" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="LineItemCost" Type="Decimal" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+          <Property Name="IsInProgress" Type="Boolean" Nullable="false" />
+          <Property Name="SortOrder" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumOfLineItems" Type="Int32" Nullable="false" />
+          <Property Name="NumOfLineItemQty" Type="Int32" Nullable="false" />
+          <Property Name="NumOfKitting" Type="Int32" Nullable="false" />
+          <Property Name="NumOfCoreKitting" Type="Int32" Nullable="false" />
+          <Property Name="NumOfKitLineItems" Type="Int32" Nullable="false" />
+          <Property Name="LocationID" Type="Int32" />
+          <Property Name="RoleIDs" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+          <Property Name="ContactID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="QtyType" Type="Int32" />
+          <Property Name="CartLineItemTypeID" Type="Int16" Nullable="false" />
+          <Property Name="InventoryTypeID" Type="Int32" />
+          <Property Name="IsPrintCostApproved" Type="Boolean" Nullable="false" />
+          <Property Name="ExternalPartNumber" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="IsHiddenFromUI" Type="Boolean" />
+          <Property Name="IsHold" Type="Boolean" Nullable="false" />
+          <Property Name="OriginalCartID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EnvironmentSetting">
+          <Key>
+            <PropertyRef Name="EnvironmentSettingID" />
+          </Key>
+          <Property Name="EnvironmentSettingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUser" Type="Int32" Nullable="false" />
+          <Property Name="ModDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModUser" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ABCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Carts" EntityType="Self.Cart" />
+          <EntitySet Name="EnvironmentSettings" EntityType="Self.EnvironmentSetting" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ABCModelStoreContainer" CdmEntityContainer="ABCEntities">
+          <EntitySetMapping Name="Carts">
+            <EntityTypeMapping TypeName="ABCModel.Cart">
+              <MappingFragment StoreEntitySet="Cart">
+                <ScalarProperty Name="CartID" ColumnName="CartID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+                <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Firm" ColumnName="Firm" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="DripDate" ColumnName="DripDate" />
+                <ScalarProperty Name="PrintFileName" ColumnName="PrintFileName" />
+                <ScalarProperty Name="ProofDate" ColumnName="ProofDate" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+                <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="IsProofMade" ColumnName="IsProofMade" />
+                <ScalarProperty Name="IsPrintFileMade" ColumnName="IsPrintFileMade" />
+                <ScalarProperty Name="IsError" ColumnName="IsError" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="RootParentID" ColumnName="RootParentID" />
+                <ScalarProperty Name="PrintCost" ColumnName="PrintCost" />
+                <ScalarProperty Name="PrintChargeBackCost" ColumnName="PrintChargeBackCost" />
+                <ScalarProperty Name="FulfillmentCost" ColumnName="FulfillmentCost" />
+                <ScalarProperty Name="PrintSurcharge" ColumnName="PrintSurcharge" />
+                <ScalarProperty Name="PostageEstimate" ColumnName="PostageEstimate" />
+                <ScalarProperty Name="OrderingType" ColumnName="OrderingType" />
+                <ScalarProperty Name="LineItemCost" ColumnName="LineItemCost" />
+                <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+                <ScalarProperty Name="IsInProgress" ColumnName="IsInProgress" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="NumOfLineItems" ColumnName="NumOfLineItems" />
+                <ScalarProperty Name="NumOfLineItemQty" ColumnName="NumOfLineItemQty" />
+                <ScalarProperty Name="NumOfKitting" ColumnName="NumOfKitting" />
+                <ScalarProperty Name="NumOfCoreKitting" ColumnName="NumOfCoreKitting" />
+                <ScalarProperty Name="NumOfKitLineItems" ColumnName="NumOfKitLineItems" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="RoleIDs" ColumnName="RoleIDs" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="QtyType" ColumnName="QtyType" />
+                <ScalarProperty Name="CartLineItemTypeID" ColumnName="CartLineItemTypeID" />
+                <ScalarProperty Name="InventoryTypeID" ColumnName="InventoryTypeID" />
+                <ScalarProperty Name="IsPrintCostApproved" ColumnName="IsPrintCostApproved" />
+                <ScalarProperty Name="ExternalPartNumber" ColumnName="ExternalPartNumber" />
+                <ScalarProperty Name="IsHiddenFromUI" ColumnName="IsHiddenFromUI" />
+                <ScalarProperty Name="IsHold" ColumnName="IsHold" />
+                <ScalarProperty Name="OriginalCartID" ColumnName="OriginalCartID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnvironmentSettings">
+            <EntityTypeMapping TypeName="ABCModel.EnvironmentSetting">
+              <MappingFragment StoreEntitySet="EnvironmentSettings">
+                <ScalarProperty Name="EnvironmentSettingID" ColumnName="EnvironmentSettingID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+                <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
